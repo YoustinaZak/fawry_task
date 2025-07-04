@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("=== E-COMMERCE SYSTEM DEMO ===\n");
+        System.out.println("Program Started");
         
         Product cheese = new ExpirableShippableProduct("Cheese", 100.0, 10, 
                                                        LocalDate.now().plusDays(7), 0.2);
@@ -16,14 +16,12 @@ public class Main {
         
         Cart cart = new Cart();
         
-        System.out.println("=== EXAMPLE AS SPECIFIED IN REQUIREMENTS ===");
+        System.out.println("Testing");
         cart.add(cheese, 2);
         cart.add(tv, 1);
         cart.add(scratchCard, 1);
         
         CheckoutService.checkout(customer, cart);
-        
-        System.out.println("\n=== ADDITIONAL DEMOS ===");
         
         System.out.println("\n1. Empty Cart Test:");
         Cart emptyCart = new Cart();
@@ -53,16 +51,6 @@ public class Main {
         mixedCart.add(biscuits, 2);
         mixedCart.add(scratchCard, 1);
         CheckoutService.checkout(customer, mixedCart);
-        
-        System.out.println("\n=== CORNER CASES COVERED ===");
-        System.out.println("✓ Empty cart validation");
-        System.out.println("✓ Insufficient balance validation");
-        System.out.println("✓ Expired product validation");
-        System.out.println("✓ Out of stock validation");
-        System.out.println("✓ Mixed shippable/non-shippable items");
-        System.out.println("✓ ShippingService interface implementation");
-        System.out.println("✓ Exact output format matching requirements");
-        
-        System.out.println("\n=== DEMO COMPLETE ===");
+
     }
 } 
